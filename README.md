@@ -37,3 +37,4 @@ In my project, there are two modes of audio denoising. One mode takes two audio 
 9. https://github.com/JacobLinCool/MPSENet
 10. https://github.com/seanghay/uvr-mdx-infer
 11. https://github.com/Xiaobin-Rong/gtcrn
+11. https://www.modelscope.cn/models/iic/speech_zipenhancer_ans_multiloss_16k_base/summary
