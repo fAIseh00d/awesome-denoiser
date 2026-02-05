@@ -26,10 +26,9 @@ crcmod==1.7
 cryptography==43.0.1
 ctranslate2==4.3.1
 cycler==0.12.1
-datasets==2.20.0
+datasets>=2.21.0
 decorator==5.1.1
 deepspeed==0.12.4
-denoiser==0.1.5
 dill==0.3.8
 editdistance==0.8.1
 exceptiongroup==1.2.2
@@ -42,7 +41,6 @@ flatbuffers==24.3.25
 fonttools==4.53.1
 frozenlist==1.4.1
 fsspec==2024.5.0
-funasr==1.1.6
 gradio==4.44.0
 gradio_client==1.3.0
 h11==0.14.0
@@ -51,8 +49,7 @@ httpcore==1.0.5
 httpx==0.27.2
 huggingface-hub==0.23.4
 humanfriendly==10.0
-hydra-colorlog==0.1.4
-hydra-core==0.11.3
+hydra-core>=1.3.0
 idna==3.7
 importlib_resources==6.4.5
 itsdangerous==2.2.0
@@ -74,7 +71,8 @@ markdown-it-py==3.0.0
 MarkupSafe==2.1.5
 matplotlib==3.8.1
 mdurl==0.1.2
-modelscope==1.18.1
+modelscope>=1.20.0
+mpsenet==1.0.3
 more-itertools==10.3.0
 mpmath==1.3.0
 msgpack==1.0.8
@@ -99,9 +97,9 @@ nvidia-ml-py==12.555.43
 nvidia-nccl-cu12==2.18.1
 nvidia-nvjitlink-cu12==12.5.40
 nvidia-nvtx-cu12==12.1.105
-omegaconf==2.3.0
+omegaconf>=2.3.0
 onnx==1.16.2
-onnxruntime==1.18.1
+onnxruntime-gpu==1.18.1
 openai-whisper==20231117
 optimum==1.20.0
 orjson==3.10.7
@@ -137,7 +135,7 @@ referencing==0.35.1
 regex==2024.5.15
 requests==2.32.3
 resampy==0.4.2
-resemble-enhance==0.0.1
+# resemble-enhance installed separately with --no-deps
 rich==13.7.0
 git+https://github.com/Desklop/RNNoise_Wrapper
 rpds-py==0.20.0
@@ -160,6 +158,7 @@ starlette==0.38.5
 sympy==1.12.1
 tabulate==0.8.10
 tensorboardX==2.6.2.2
+tflite-runtime==2.14.0
 threadpoolctl==3.5.0
 tiktoken==0.7.0
 tokenizers==0.19.1
@@ -168,7 +167,7 @@ torch==2.1.1
 torch-complex==0.4.4
 torchaudio==2.1.1
 torchvision==0.16.1
-tqdm==4.66.1
+tqdm>=4.66.3
 transformers==4.41.2
 triton==2.1.0
 typer==0.12.5

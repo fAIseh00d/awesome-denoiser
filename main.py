@@ -11,6 +11,7 @@ from mdxnet_denoise import mdxnet_denoise
 from mpsenet_denoise import mpsenet_denoise
 from dtln_denoise import dtln_denoise
 from gtcrn_denoise import gtcrn_denoise
+from zipenhancer_denoise import zipenhancer_denoise
 
 
 
@@ -69,6 +70,8 @@ def model_inference(audio_input1, audio_input2, capability_inputs, model_inputs,
         return dtln_denoise(audio_input1, audio_input2, dB, min_silence_duration)
     elif model_inputs == "gtcrn":
         return gtcrn_denoise(audio_input1, audio_input2, dB, min_silence_duration)
+    elif model_inputs == "zipenhancer-ali":
+        return zipenhancer_denoise(audio_input1, audio_input2, dB, min_silence_duration)
 
 def launch():
     with gr.Blocks(theme=gr.themes.Soft()) as demo:
@@ -77,7 +80,7 @@ def launch():
             with gr.Column():
                 with gr.Accordion("Configuration"):
                     capability_inputs = gr.Dropdown(choices=["language_recognition_denoiser", "speech_translation_denoiser"], value="language_recognition_denoiser", label="Capability")
-                    model_inputs = gr.Dropdown(choices=["mdxnet", "dtln", "gtcrn", "mpsenet", "denoiser_dns64", "denoiser_dns48", "noisereduce","resemble-enhance","frcrn-ali","mossformer2-ali","rnnoiser",'deepfilternet'], value="mdxnet", label="Model")
+                    model_inputs = gr.Dropdown(choices=["mdxnet", "dtln", "gtcrn", "mpsenet", "denoiser_dns64", "denoiser_dns48", "noisereduce","resemble-enhance","frcrn-ali","mossformer2-ali","zipenhancer-ali","rnnoiser",'deepfilternet'], value="mdxnet", label="Model")
                     dB = gr.Slider(minimum=-80, maximum=0, step=1, label="dB", value=-20)
                     min_silence_duration = gr.Slider(minimum=0, maximum=1, step=0.01, label="Min_Silence_Duration", value=0.1)
                 with gr.Row():
